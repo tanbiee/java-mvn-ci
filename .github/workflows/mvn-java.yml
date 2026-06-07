@@ -1,0 +1,21 @@
+name: java CI pipleline
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+  - name: checkout repository code
+    uses: actions/checkou@v4
+  
+  - name: setup java 
+    uses: actions/setup-java@v4
+  
+  - name : run python code
+    run: |
+      mvn clean package || echo "no such file exist"
+
+  

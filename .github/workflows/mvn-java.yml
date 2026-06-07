@@ -8,14 +8,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-  - name: checkout repository code
-    uses: actions/checkou@v4
+      - name: checkout repository code
+        uses: actions/checkout@v4
   
-  - name: setup java 
-    uses: actions/setup-java@v4
+      - name: setup java 
+        uses: actions/setup-java@v4
   
-  - name : run python code
-    run: |
-      mvn clean package || echo "no such file exist"
+      - name : run python code
+        run: |
+          mvn clean package || echo "no such file exist"
 
   
